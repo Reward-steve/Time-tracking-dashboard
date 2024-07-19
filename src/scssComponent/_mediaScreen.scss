@@ -1,0 +1,40 @@
+@mixin extralSmallScreen {
+	@media (min-width: 0) {
+		@content;
+	}
+}
+
+// @mixin phoneWatchScreen {
+// 	@media (min-width: 162) {
+// 		@content;
+// 	}
+// }
+
+@mixin smallScreen {
+	@media (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mediumScreen {
+	@media (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin largeScreen {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin extralLargeScreen {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+@mixin extralXtralLargeScreen {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}

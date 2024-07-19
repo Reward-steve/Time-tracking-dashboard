@@ -1,0 +1,19 @@
+.body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+	background: hsl(226, 43%, 10%);
+	width: 100%;
+	height: 100vh;
+}
+
+.overall {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+	background: hsl(264, 64%, 52%);
+}

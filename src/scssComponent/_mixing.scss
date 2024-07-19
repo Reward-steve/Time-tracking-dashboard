@@ -1,0 +1,7 @@
+@mixin varStyle($conent: center) {
+	display: flex;
+	justify-content: $conent;
+	align-items: center;
+	width: $fullSize;
+	height: $fullSizeVh;
+}

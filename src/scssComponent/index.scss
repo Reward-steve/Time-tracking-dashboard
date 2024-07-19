@@ -1,0 +1,620 @@
+@use "sass:math";
+
+@import "_Allvairable.scss";
+@import "_mixing.scss";
+
+@import "_mediaScreen.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+}
+
+.dashboard-container {
+	@include varStyle;
+	background: $VeryDarkBlue;
+	@include extralSmallScreen {
+		height: $fullSizeVh * 7.8;
+		width: $fullSize;
+		display: $flex;
+		justify-content: $center;
+	}
+	@include smallScreen {
+		height: $fullSizeVh * 3 + 20;
+	}
+	@include mediumScreen {
+		height: $fullSizeVh * 4;
+	}
+	@include largeScreen {
+		height: $fullSizeVh + 50;
+	}
+	@include extralLargeScreen {
+		height: $fullSizeVh + 150;
+	}
+	@include extralXtralLargeScreen {
+		@include varStyle;
+	}
+}
+
+.dashboard {
+	width: $fullSize - 20;
+	height: $fullSize - 20;
+	display: $flex;
+	justify-content: space-between;
+	align-items: $center;
+	background: $VeryDarkBlue;
+	@include extralSmallScreen {
+		flex-direction: column;
+		height: $fullSize - 10;
+		width: $fullSize - 5;
+	}
+	@include mediumScreen {
+		height: $fullSize - 5;
+		width: $fullSize - 5;
+	}
+	@include largeScreen {
+		height: $fullSize - 10;
+		display: flex;
+		width: $fullSize;
+	}
+	@include extralLargeScreen {
+		width: $fullSize - 15;
+	}
+	@include extralXtralLargeScreen {
+		flex-direction: initial;
+		width: $fullSize - 20;
+		height: $fullSize - 20;
+		display: $flex;
+		justify-content: space-between;
+		align-items: $center;
+		background: $VeryDarkBlue;
+	}
+}
+
+.profile-remark-container {
+	width: math.div($halfSize, 2);
+	height: $fullSize;
+	display: $flex;
+	justify-content: $center;
+	align-items: $center;
+	flex-direction: column;
+	background-color: $DarkBlue;
+	border-radius: 20px;
+	@include extralSmallScreen {
+		width: 90%;
+		height: 15%;
+	}
+	@include smallScreen {
+		width: 90%;
+		height: 15%;
+	}
+	@include mediumScreen {
+		width: $fullSize - 10;
+		height: $halfSize - 34;
+		flex-direction: initial;
+	}
+	@include largeScreen {
+		width: $fullSize - 5;
+		height: $halfSize - 25;
+		flex-direction: column;
+	}
+	@include extralLargeScreen {
+		width: $fullSize;
+	}
+	@include extralXtralLargeScreen {
+		width: math.div($halfSize, 2);
+		height: $fullSize;
+		margin: 0;
+		display: $flex;
+		justify-content: $center;
+		align-items: $center;
+		flex-direction: column;
+		background-color: $DarkBlue;
+		border-radius: 20px;
+	}
+	.profile-remark {
+		width: $fullSize;
+		height: $halfSize + 20;
+		display: $flex;
+		flex-direction: column;
+		justify-content: $center;
+		align-items: $center;
+		background-color: $DesaturatedBlue;
+		border-radius: 20px;
+		z-index: 1;
+		@include extralSmallScreen {
+			height: $fullSize - 30;
+		}
+		@include smallScreen {
+			height: 65%;
+			flex-direction: initial;
+		}
+		@include mediumScreen {
+			width: $fullSize - 10;
+			height: $fullSize - 5;
+		}
+		@include largeScreen {
+			width: $fullSize;
+			flex-direction: initial;
+			justify-content: space-between;
+			height: 90%;
+		}
+		@include extralLargeScreen {
+			justify-content: $center;
+			flex-direction: initial;
+			height: $halfSize + 20;
+		}
+		@include extralXtralLargeScreen {
+			width: $fullSize;
+			height: $halfSize + 20;
+			display: $flex;
+			flex-direction: column;
+			justify-content: $center;
+			align-items: $center;
+			background-color: $DesaturatedBlue;
+			border-radius: 20px;
+			z-index: 1;
+		}
+		.profile-pic-container {
+			width: $fullSize;
+			height: $halfSize - 20;
+			justify-content: left;
+			display: flex;
+			align-items: $center;
+			@include extralSmallScreen {
+				height: $halfSize - 20;
+				width: $fullSize;
+			}
+			@include smallScreen {
+				width: $halfSize - 20;
+				height: $halfSize + 15;
+			}
+			@include mediumScreen {
+				height: $halfSize - 20;
+			}
+			@include largeScreen {
+				width: $halfSize - 20;
+				height: $halfSize + 30;
+				justify-content: $center;
+			}
+			@include extralLargeScreen {
+				width: math.div($fullSize, 4);
+				height: $halfSize + 20;
+			}
+			@include extralXtralLargeScreen {
+				width: $fullSize;
+				height: $halfSize - 20;
+				justify-content: left;
+				display: flex;
+				align-items: $center;
+			}
+			.profile-pic {
+				width: 45%;
+				height: $fullSize - 10;
+				margin-left: 10%;
+				border: 2px solid $white;
+				border-radius: 100%;
+				@include extralSmallScreen {
+					width: $halfSize - 20;
+					height: $fullSize;
+				}
+				@include smallScreen {
+					width: $fullSize;
+				}
+				@include mediumScreen {
+				}
+				@include largeScreen {
+					width: $fullSize - 20;
+					height: $halfSize + 25;
+				}
+				@include extralLargeScreen {
+					width: $fullSize;
+					height: $fullSize;
+				}
+				@include extralXtralLargeScreen {
+					width: 45%;
+					height: $fullSize - 10;
+					margin-left: 10%;
+					border: 2px solid $white;
+					border-radius: 100%;
+				}
+			}
+		}
+	}
+}
+
+.profile-info {
+	width: $fullSize - 10;
+	margin-left: 10%;
+	height: $halfSize + 10;
+	display: grid;
+	align-items: $center;
+	text-align: left;
+	color: $white;
+	font-family: sans-serif;
+	color: $gainsboro;
+	@include extralSmallScreen {
+		margin: 0;
+		height: $halfSize;
+		width: 70%;
+		font-size: 1rem;
+	}
+	@include smallScreen {
+		font-size: 1.5rem;
+		margin-left: 10%;
+		height: $halfSize - 10;
+	}
+	@include mediumScreen {
+		font-size: 2rem;
+		height: $halfSize - 10;
+	}
+	@include largeScreen {
+		height: $halfSize - 30;
+		margin: 0;
+		width: $halfSize + 15;
+		color: $gainsboro;
+	}
+	@include extralLargeScreen {
+		width: $fullSize - 40;
+		display: flex;
+		font-size: 2rem;
+		justify-content: space-around;
+		color: $gainsboro;
+	}
+	@include extralXtralLargeScreen {
+		width: $fullSize - 10;
+		height: $halfSize + 10;
+		margin-left: 10%;
+		display: grid;
+		align-items: $center;
+		text-align: left;
+		color: $white;
+		font-size: 1.5rem;
+		color: $gainsboro;
+	}
+	.name {
+		font-size: 2.8rem;
+		font-weight: 100;
+		font-weight: 500;
+		color: white;
+		@include extralSmallScreen {
+			font-size: 1.3rem;
+		}
+		@include smallScreen {
+			font-size: 1.5rem;
+		}
+		@include mediumScreen {
+			margin: 0;
+			font-size: 2.5rem;
+		}
+		@include largeScreen {
+			font-size: 4rem;
+		}
+		@include extralLargeScreen {
+			font-size: 2.9rem;
+		}
+		@include extralXtralLargeScreen {
+			font-size: 2.8rem;
+			font-weight: 100;
+			font-weight: 500;
+			color: white;
+			margin: initial;
+		}
+	}
+}
+
+.remark-options {
+	width: 70%;
+	display: $flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	text-align: left;
+	align-items: flex-start;
+	height: 30%;
+	background-color: hsl(235, 46%, 20%);
+	border-radius: $remarkRadius;
+	color: $gainsboro;
+	list-style: circle;
+	font-size: 1.5rem;
+	@include extralSmallScreen {
+		width: $fullSize - 10;
+		flex-direction: row;
+		height: 30%;
+		align-items: center;
+		display: flex;
+		font-size: 0.8rem;
+		justify-content: space-between;
+		list-style-type: none;
+		padding: 0;
+	}
+	@include smallScreen {
+		font-size: 1.2rem;
+		height: $halfSize;
+		width: 80%;
+		justify-content: space-between;
+		list-style: none;
+	}
+	@include mediumScreen {
+		margin-left: 5%;
+		flex-direction: column;
+		height: $fullSize - 35;
+		width: $halfSize - 30;
+	}
+	@include largeScreen {
+		flex-direction: initial;
+		justify-content: space-between;
+		width: $fullSize - 15;
+		height: 30%;
+		margin: 0;
+		font-size: 1.8rem;
+		align-items: center;
+		font-size: 2rem;
+	}
+	@include extralLargeScreen {
+		font-size: 1.5rem;
+	}
+	@include extralXtralLargeScreen {
+		height: 30%;
+		flex-direction: column;
+		list-style: circle;
+		width: 70%;
+		display: $flex;
+		justify-content: space-evenly;
+		text-align: left;
+		align-items: flex-start;
+		border-radius: $remarkRadius;
+		font-size: 1.5rem;
+	}
+
+	.remark-options p {
+		margin-left: math.div($fullSize, 10);
+		.remark-option {
+			font-size: 1.1rem;
+			// text-decoration: none;
+			font-weight: normal;
+			font-family: sans-serif;
+			transition: color 0.4s;
+			@include extralXtralLargeScreen {
+				font-size: 1.1rem;
+				// text-decoration: none;
+				font-weight: normal;
+				font-family: sans-serif;
+				transition: color 0.4s;
+			}
+		}
+	}
+}
+
+.remark-option:hover {
+	cursor: pointer;
+	color: $white;
+}
+
+#work {
+	background-color: hsl(15, 100%, 70%);
+}
+#play {
+	background-color: hsl(195, 74%, 62%);
+}
+#study {
+	background-color: hsl(348, 100%, 68%);
+}
+#exercise {
+	background-color: hsl(145, 58%, 55%);
+}
+#social {
+	background-color: hsl(264, 64%, 52%);
+}
+#self-care {
+	background-color: hsl(15, 100%, 70%);
+}
+
+.project-list-container {
+	width: 73%;
+	height: $fullSize - 18;
+	display: grid;
+	gap: 5%;
+	grid-template-columns: auto auto auto;
+	@include extralSmallScreen {
+		width: $fullSize - 10;
+		gap: 2%;
+		grid-template-columns: auto;
+	}
+	@include largeScreen {
+		width: $fullSize - 5;
+		gap: 4%;
+		grid-template-columns: auto auto;
+		height: $fullSize - 28;
+	}
+	@include extralLargeScreen {
+		grid-template-columns: auto auto;
+		width: 100%;
+	}
+	@include extralXtralLargeScreen {
+		width: 73%;
+		height: $fullSize;
+		display: grid;
+		gap: 5%;
+		grid-template-columns: auto auto auto;
+	}
+
+	.cards {
+		width: $fullSize;
+		height: $fullSize - 1;
+		display: $flex;
+		flex-direction: column;
+		border-radius: 15px;
+		@include extralXtralLargeScreen {
+			width: $fullSize;
+			height: $fullSize - 1;
+			display: $flex;
+			flex-direction: column;
+			border-radius: 15px;
+		}
+		.icon-img {
+			width: $fullSize;
+			height: math.div($halfSize, 2);
+			display: $flex;
+			justify-content: right;
+			border-radius: $iconImgRadius;
+			@include extralXtralLargeScreen {
+				width: $fullSize;
+				height: math.div($halfSize, 2);
+				display: $flex;
+				justify-content: right;
+				border-radius: $iconImgRadius;
+			}
+			img {
+				position: relative;
+				height: 130%;
+				width: 25%;
+				margin-right: 10px;
+				@include extralXtralLargeScreen {
+					width: $halfSize - 15;
+				}
+			}
+		}
+		.cards-title-container {
+			width: $fullSize;
+			height: $fullSize - 25;
+			display: $flex;
+			flex-direction: column;
+			align-items: $center;
+			border-radius: 14px;
+			background-color: $DarkBlue;
+			color: $white;
+			z-index: 1;
+			@include extralXtralLargeScreen {
+				width: $fullSize;
+				height: $fullSize - 25;
+				display: $flex;
+				flex-direction: column;
+				align-items: $center;
+				border-radius: 14px;
+				background-color: $DarkBlue;
+				color: $white;
+			}
+			.card-title {
+				display: $flex;
+				justify-content: space-around;
+				align-items: center;
+				width: $fullSize;
+				font-weight: 100;
+				height: 50%;
+				@include extralSmallScreen {
+					font-size: 1.1rem;
+					justify-content: space-between;
+					align-items: center;
+					width: 88%;
+				}
+				@include smallScreen {
+					font-size: 1.6rem;
+					justify-content: space-between;
+					width: 80%;
+					height: 40%;
+				}
+				@include mediumScreen {
+					font-size: 1.8rem;
+					height: 30%;
+				}
+				@include largeScreen {
+					font-size: 2rem;
+				}
+				@include extralLargeScreen {
+					font-size: 1.8rem;
+				}
+				@include extralXtralLargeScreen {
+					height: 50%;
+					display: $flex;
+					justify-content: space-around;
+					align-items: center;
+					width: $fullSize;
+					font-weight: 100;
+					// font-size: 1.5rem;
+				}
+				.dots {
+					font-size: 25px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.hour-container {
+	width: 100%;
+	height: 55%;
+	font-size: 2rem;
+	@include extralSmallScreen {
+		width: 70%;
+		height: 30%;
+		font-size: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	@include smallScreen {
+		flex-direction: initial;
+		width: 80%;
+	}
+	@include mediumScreen {
+		flex-direction: column;
+	}
+	@include extralXtralLargeScreen {
+		width: 100%;
+		height: 55%;
+		font-size: 2rem;
+	}
+	h2 {
+		font-family: sans-serif;
+		text-align: center;
+		font-weight: 100;
+		@include extralSmallScreen {
+			font-size: 2rem;
+		}
+		@include largeScreen {
+			font-size: 4rem;
+		}
+		@include extralLargeScreen {
+			font-size: 2rem;
+		}
+		@include extralXtralLargeScreen {
+			font-family: sans-serif;
+			text-align: center;
+			font-weight: 100;
+		}
+	}
+	p {
+		font-size: 1.3rem;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 60%;
+		color: rgb(173, 169, 169);
+		@include extralSmallScreen {
+			font-size: 0.8rem;
+		}
+		@include smallScreen {
+			font-size: 1.3rem;
+		}
+		@include largeScreen {
+			font-size: 1.8rem;
+			height: 42%;
+		}
+		@include extralLargeScreen {
+			font-size: 1.3rem;
+			height: 60%;
+		}
+		@include extralXtralLargeScreen {
+			font-size: 1.3rem;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			height: 60%;
+			color: rgb(173, 169, 169);
+		}
+	}
+}
+//the end// 620 lines of code

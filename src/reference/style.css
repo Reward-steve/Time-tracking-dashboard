@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.montserrat-name-font {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.dashboard-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background: hsl(226, 43%, 10%);
+}
+
+.dashboard {
+	width: 80%;
+	height: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile-remark-container {
+	width: 22%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 20px;
+}
+
+.project-list-container {
+	width: 75%;
+	height: 100%;
+	display: grid;
+	gap: 5%;
+	grid-template-columns: auto auto auto;
+}
+
+.cards {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 20px;
+}
+
+.cards-title {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	background-color: hsl(235, 46%, 20%);
+}
+
+.profile-remark {
+	width: 100%;
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(246, 80%, 60%);
+	border-radius: 20px;
+	z-index: 1;
+}
+
+.profile-pic {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.profile-pic img {
+	width: 35%;
+	height: 50%;
+	margin-left: 10%;
+	border: 2px solid white;
+	border-radius: 100%;
+}
+
+.profile-info {
+	width: 90%;
+	display: grid;
+	align-items: center;
+	text-align: left;
+	color: white;
+	margin-left: 10%;
+	font-family: sans-serif;
+}
+
+.name {
+	font-size: 2.8rem;
+	font-weight: 100;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+
+.remark-options {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	text-align: left;
+	align-items: flex-start;
+	height: 30%;
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 0 0 20px 20px;
+}
+
+.remark-options p {
+	margin-left: 10%;
+}
+
+.remark-option {
+	color: gray;
+	font-size: 1.1rem;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: sans-serif;
+	cursor: pointer;
+	transition: color 0.4s;
+}
+.remark-option:hover {
+	color: white;
+}
+
+.icon-img {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: right;
+}
+
+#work {
+	background-color: hsl(15, 100%, 70%);
+	height: 70%;
+}
+#play {
+	background-color: hsl(195, 74%, 62%);
+	height: 70%;
+}
+#study {
+	background-color: hsl(348, 100%, 68%);
+	height: 70%;
+}
+#exercise {
+	background-color: hsl(145, 58%, 55%);
+	height: 70%;
+}
+#social {
+	background-color: hsl(264, 64%, 52%);
+	height: 70%;
+}
+#self-care {
+	background-color: hsl(15, 100%, 70%);
+	height: 70%;
+}
+
+@media (min-width: 360px) {
+	.dashboard-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		background: red;
+	}
+}
